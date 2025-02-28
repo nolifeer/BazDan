@@ -56,6 +56,20 @@ SELECT * FROM orders WHERE STATUS != 'cancelled' ORDER BY SUM desc LIMIT 2
    
 4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
 
+   ![image](https://github.com/user-attachments/assets/2b978fa9-ec10-4b00-84cd-8b497cb545c4)
+
+   INSERT INTO products (id,NAME,COUNT,price) VALUE (7, 'VR очки',2,70000)
+
+
+   5) В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
+
+      ![image](https://github.com/user-attachments/assets/3a6dace6-ae51-4d75-a46d-5ad10874b347)
+
+      UPDATE products SET NAME='PS5' WHERE NAME='IMAC'
+
+
+
+
 
 
 
