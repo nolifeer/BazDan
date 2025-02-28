@@ -1,3 +1,5 @@
+
+![5312033621076470302](https://github.com/user-attachments/assets/a14a037b-9ed9-48c3-b228-f2ea43876a4f)
 # BazDan
 1) Выберите из таблицы orders все заказы
    
