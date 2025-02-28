@@ -49,7 +49,8 @@ SELECT * FROM orders WHERE STATUS IN ('new', 'cancelled')
 SELECT id,sum FROM orders WHERE products_count > 3
 
 
-#2 Практическая
+# Практическая 2
+
 1) Выберите из таблицы orders 3 самых дешевых заказа за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
