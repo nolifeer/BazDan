@@ -1,14 +1,21 @@
 # Шпора
 Вставка данных в таблицу:
 INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+
  Выборка данных из таблицы:
 SELECT * FROM table_name;
+
 Удаление данных:
 DELETE FROM table_name WHERE condition;
+
 Обновление поля во всех записях : update table1 set column1 = new_value 
+
 Обновления поля во всех записях, соответствующих условию : update table1 set column 1 =new_value 
+
 Добавление одной записи : INSERT INTO table (column1, column2) values (value1, value2)
+
 Добавление нескольких записей : INSERT INTO table (column1, column2) values(value11, value12), (value21, value22), ....
+
 Добавление записей из другой таблицы : insert into table (column1, column2) select (col1, col2) from table 2
 
 ![5312033621076470302](https://github.com/user-attachments/assets/a14a037b-9ed9-48c3-b228-f2ea43876a4f)
