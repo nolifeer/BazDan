@@ -22,12 +22,12 @@ INSERT INTO orders (id, products, sum) VALUES (6, 4, 8000) = пример доб
 
 asc = от меньшего к большему desc = по убыванию
 
+SELECT * FROM users ORDER BY id LIMIT 10 OFFSET 10;
+
 В этом примере:
 - LIMIT 10 означает, что вернётся 10 записей.
 
 - OFFSET 10 пропускает первые 10 записей, начиная выборку с 11-й.
-
-SELECT * FROM users ORDER BY id LIMIT 10 OFFSET 10;
 
 
 # Практическая 1
