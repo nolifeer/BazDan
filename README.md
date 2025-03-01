@@ -125,6 +125,8 @@ SELECT * FROM orders WHERE STATUS != 'cancelled' ORDER BY SUM desc LIMIT 2
 
 ![image](https://github.com/user-attachments/assets/0d981754-6f13-41c4-8040-f743fe7c718b)
 
+create table users (id int, first_name varchar (50), last_name varchar(50)); 
+insert into users (id, first_name, last_name) values (1, 'Дмитрий', 'Иванов'), (2, 'Анатолий', 'Белый'), (3, 'Денис','Давыдов');
 
 
 
