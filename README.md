@@ -18,6 +18,8 @@ DELETE FROM table_name WHERE condition;
 
 Добавление записей из другой таблицы : insert into table (column1, column2) select (col1, col2) from table 2
 
+INSERT INTO orders (id, products, sum) VALUES (6, 4, 8000) = пример добавления еще одного пункта в таблицу.
+
 asc = от меньшего к большему desc = по убыванию
 
 
