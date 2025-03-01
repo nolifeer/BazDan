@@ -117,6 +117,22 @@ SELECT * FROM orders WHERE STATUS != 'cancelled' ORDER BY SUM desc LIMIT 2
       UPDATE products SET NAME='PS5' WHERE NAME='IMAC'
 
 
+      # Практическая 3
+
+Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
+
+Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
+
+![image](https://github.com/user-attachments/assets/0d981754-6f13-41c4-8040-f743fe7c718b)
+
+
+
+
+
+
+
+
+
 
 
 
