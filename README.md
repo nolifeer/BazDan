@@ -20,7 +20,7 @@ DELETE FROM table_name WHERE condition;
 
 asc = от меньшего к большему desc = по убыванию
 
-![5312033621076470302](https://github.com/user-attachments/assets/a14a037b-9ed9-48c3-b228-f2ea43876a4f)
+
 # Практическая 1
 1) Выберите из таблицы orders все заказы
    
