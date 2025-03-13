@@ -169,10 +169,9 @@ VALUES
 (2, 17, 15, 999999.99),
 (3, 145677, 21, 1240.00)
 
-> Aleksandr:
 drop table if exists products;
 
-> Aleksandr:
+
 Создайте таблицу products для хранения информации о товарах в магазине. Выберите оптимальные поля для хранения данных в соответствии с условиями:
 
 id типа INT – только положительные числа;
@@ -185,10 +184,6 @@ price – цена в рублях без копеек (не более 1 млн
 Стиральная машина, 0 штук, 23 570 рублей.
 Утюг, 3 штуки, 7300 рублей
 
-> Aleksandr:
-.
-
-> Aleksandr:
 drop table if exists products;
 CREATE TABLE products
 (id INT UNSIGNED, name VARCHAR(100), count TINYINT UNSIGNED, price MEDIUMINT UNSIGNED);
@@ -199,7 +194,6 @@ VALUES
 (2, "Стиральная машина", 0, 23570),
 (3, "Утюг", 3, 7300);
 
-drop table if exists products;
 Создайте таблицу products для хранения информации о товарах в магазине. Выберите оптимальные поля для хранения данных в соответствии с условиями:
 
 id типа INT – только положительные числа;
@@ -212,8 +206,7 @@ price – цена в рублях без копеек (не более 1 млн
 Стиральная машина, 0 штук, 23 570 рублей.
 Утюг, 3 штуки, 7300 рублей
 
-.
-drop table if exists products;
+
 CREATE TABLE products
 (id INT UNSIGNED, name VARCHAR(100), count TINYINT UNSIGNED, price MEDIUMINT UNSIGNED);
 INSERT INTO products 
