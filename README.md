@@ -142,6 +142,7 @@ price – цена в рублях без копеек (не более 1 млн
 Утюг, 3 штуки, 7300 рублей
 
 drop table if exists products; = удаление существующий таблицы
+
 CREATE TABLE products
 (id INT UNSIGNED, name VARCHAR(100), count TINYINT UNSIGNED, price MEDIUMINT UNSIGNED);
 INSERT INTO products 
