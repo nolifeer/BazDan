@@ -362,18 +362,29 @@ email – адрес электронной почты, строка не бол
 date_joined – дата регистрации (достаточно хранить дату, без времени)
 last_activity – дата и время последней активности (с точностью до секунд).
 
-Create table calendar (
-id int unsigned,
-user_id int unsigned,
-doctor_id int unsigned,
-visit_date datetime);
-Insert into calendar (id, user_id, doctor_id, visit_date)
-Values 
-(1, 1914 , 1, '2017-04-08 12:00:00'),
-(2, 12, 1, '2017-04-08 12:30:00'),
-(3, 4641, 2, '2017-04-09 09:00:00'),
-(4, 784, 1,'2017-04-08 13:00:00'),
-(5, 15, 2,'2017-04-09 10:00:00')
+![image](https://github.com/user-attachments/assets/f66cd208-1113-4bb6-8000-98f2f481f81b)
+
+create table users (
+id int(10) unsigned,
+email varchar (100),
+date_joined date,
+last_activity datetime
+);
+insert into users (id, email, date_joined,last_activity)
+values
+(1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'),
+(2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'),
+(3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
+
+
+
+Создайте таблицу users для хранения информации о пользователях сайта.
+В таблице должны быть следующие поля:
+
+id – идентификатор, целое положительное;
+email – адрес электронной почты, строка не более 100 символов;
+date_joined – дата регистрации (достаточно хранить дату, без времени)
+last_activity – дата и время последней активности (с точностью до секунд).
 
 
 
