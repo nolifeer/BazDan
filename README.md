@@ -376,6 +376,20 @@ Values
 
 
 
+Create table calendar (
+id int unsigned,
+user_id int unsigned,
+doctor_id int unsigned,
+visit_date datetime);
+Insert into calendar (id, user_id, doctor_id, visit_date)
+Values 
+(1, 1914 , 1, '2017-04-08 12:00:00'),
+(2, 12, 1, '2017-04-08 12:30:00'),
+(3, 4641, 2, '2017-04-09 09:00:00'),
+(4, 784, 1,'2017-04-08 13:00:00'),
+(5, 15, 2,'2017-04-09 10:00:00')
+
+
 
 
 
