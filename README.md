@@ -391,6 +391,23 @@ Values
 (5, 15, 2,'2017-04-09 10:00:00')
 
 
+![image](https://github.com/user-attachments/assets/fa475e73-0844-4c20-b657-2fa3a83f3668)
+
+drop table if exists users;
+create table users (
+id int (10) ,
+first_name varchar (50) ,
+last_name varchar (60) ,
+bio text
+);
+INSERT INTO users (id, first_name, last_name, bio)
+VALUES
+(1,'Антон','Кулик','С отличием окончил 39 лицей.'),
+(2,'Сергей','Давыдов',''),
+(3,'Дмитрий','Соколов','Профессиональный программист.');
+
+
+
 
 
 
