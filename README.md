@@ -419,6 +419,83 @@ VALUES
 
 
 
+Практическая 5
+
+1.Выберите из таблицы orders 4 самых дорогих заказов за всё время. Данные нужно отсортировать в порядке убывания цены. Отмененные заказы не учитывайте.
+
+SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum DESC LIMIT 4;
+
+![image](https://github.com/user-attachments/assets/3ef074f4-57f7-48a8-85ee-5f2eb79330ab)
+
+
+2. Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе
+
+SELECT name, price FROM products WHERE count > 0 ORDER BY price ASC LIMIT 4;
+
+![image](https://github.com/user-attachments/assets/2c728f2a-ebb6-43a5-842d-407c48680555)
+
+3.Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше. Данные отсортируйте по дате в обратном порядке.
+
+SELECT *
+FROM orders
+WHERE sum >= 3200
+ORDER BY date DESC
+LIMIT 3;
+
+![image](https://github.com/user-attachments/assets/a59de9f0-3450-44d6-9485-06e1abd4865b)
+
+
+
+4) Создайте дтаблицу:  ![image](https://github.com/user-attachments/assets/0f599bee-f5f1-4beb-8ab1-9063bc6c89a7)
+
+
+
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    count INT,
+    price DECIMAL(10, 2)
+);
+
+INSERT INTO products (id, name, count, price) VALUES
+(1, 'Стиральная машина', 5, 10000.00),
+(2, 'Холодильник', 0, 10000.00),
+(3, 'Микроволновка', 3, 4000.00),
+(4, 'Пылесос', 2, 4500.00),
+(5, 'Вентилятор', 0, 700.00),
+(6, 'Телевизор', 7, 31740.00),
+(7, 'Тостер', 2, 2500.00),
+(8, 'Принтер', 4, 3000.00),
+(9, 'Активные колонки', 1, 2900.00),
+(10, 'Ноутбук', 4, 36990.00),
+(11, 'Посудомоечная машина', 0, 17800.00),
+(12, 'Видеорегистратор', 23, 4000.00),
+(13, 'Смартфон', 8, 12300.00),
+(14, 'Флешка', 4, 1400.00),
+(15, 'Блендер', 0, 5500.00),
+(16, 'Газовая плита', 5, 11900.00),
+(17, 'Клавиатура', 3, 1800.00);
+
+
+![image](https://github.com/user-attachments/assets/b2fcf6d7-9400-4d26-b57a-4d36741163bb)
+
+
+
+5) Из этой таблицы сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
+
+
+   SELECT name, price
+FROM products
+ORDER BY price ASC
+LIMIT 5 OFFSET 10;
+
+
+![image](https://github.com/user-attachments/assets/e21f6586-bb76-49b9-ac52-57a3fb9208c8)
+
+
+
+
+
 
 
 
