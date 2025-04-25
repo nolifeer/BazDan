@@ -495,6 +495,56 @@ LIMIT 5 OFFSET 10;
 
 # Практическая 6
 
+1. Создайте таблицу orders для хранения списка заказов: id — идентификатор, целое положительное. user_id — идентификатор пользователя, который оформил заказ. Целое положительное, NULL запрещен. amount — стоимость заказа. Целое положительное число не более 1 млн. NULL запрещен, по умолчанию 0. created — дата и время создания заказа. NULL запрещен. state — статус заказа. Выбор из new, cancelled, in_progress, delivered, completed. Можно выбрать только один вариант. NULL запрещен. По умолчанию должен стоять new. Добавьте 3 записи так, чтобы получалась таблица ниже:
+
+![image](https://github.com/user-attachments/assets/95033d13-5708-465d-ba47-ed5c505a20b7)
+
+CREATE TABLE orders ( id INTEGER PRIMARY KEY AUTO_INCREMENT, user_id INTEGER NOT NULL, amount INTEGER NOT NULL DEFAULT 0, created DATETIME NOT NULL, state ENUM('new', 'cancelled', 'in_progress', 'delivered', 'completed') NOT NULL DEFAULT 'new', CHECK (user_id > 0), CHECK (amount >= 0 AND amount <= 1000000) );
+
+INSERT INTO orders (user_id, amount, created) VALUES (56, 5400, '2018-02-01 17:46:59'); INSERT INTO orders (user_id, amount, created) VALUES (90, 249, '2018-02-01 19:13:04'); INSERT INTO orders (user_id, amount, created) VALUES (78, 2200, '2018-02-01 22:43:09');
+
+SELECT * FROM orders;
+
+![image](https://github.com/user-attachments/assets/855f40ea-fd16-40ce-9f1a-359d107c2409)
+
+2.Создайте таблицу users для хранения списка пользователей сайта: id — идентификатор, целое положительное. first_name — имя, строка до 20 символов. NULL запрещен. last_name — фамилия, строка до 20 символов. NULL запрещен. patronymic — отчество, строка до 20 символов. NULL запрещен, по умолчанию пустая строка. is_active — отметка об активности пользователя. Логическое поле, по умолчанию TRUE. is_superuser — отметка администратора. Логическое поле, по умолчанию FALSE. Добавьте 3 записи так, чтобы получалась таблица 
+
+![image](https://github.com/user-attachments/assets/1c466294-6e84-4f31-bf6c-5c5ecdcbdbc2)
+
+CREATE TABLE users ( id INTEGER PRIMARY KEY AUTO_INCREMENT, first_name VARCHAR(20) NOT NULL, last_name VARCHAR(20) NOT NULL, patronymic VARCHAR(20) NOT NULL DEFAULT '', is_active BOOLEAN NOT NULL DEFAULT TRUE, is_superuser BOOLEAN NOT NULL DEFAULT FALSE, CHECK (LENGTH(first_name) <= 20), CHECK (LENGTH(last_name) <= 20), CHECK (LENGTH(patronymic) <= 20) );
+
+INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser) VALUES ('Дмитрий', 'Иванов', '', TRUE, FALSE);
+
+INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser) VALUES ('Анатолий', 'Белый', 'Сергеевич', TRUE, TRUE);
+
+INSERT INTO users (first_name, last_name, is_active, is_superuser) VALUES ('Андрей', 'Крючков', FALSE, FALSE);
+
+SELECT * FROM users;
+
+![image](https://github.com/user-attachments/assets/cabf66ca-02fe-4053-a6a9-642e98839bb8)
+
+3.Создайте таблицу products для хранения товаров в интернет магазине: id — идентификатор, целое положительное. category_id — категория, целое положительное. Может принимать NULL. По умолчанию NULL. name — название, строка до 100 символов. NULL запрещен. count — количество, целое положительное до 255. NULL запрещен, по умолчанию 0. price — цена типа DECIMAL с 10 знаками, 2 из которых выделены для копеек. NULL запрещен, по умолчанию 0.00. Добавьте 3 записи так, чтобы получалась таблица
+
+![image](https://github.com/user-attachments/assets/17b9c46b-51ea-47ed-b960-93aede839f72)
+
+CREATE TABLE products ( id INTEGER PRIMARY KEY AUTO_INCREMENT, category_id INTEGER NULL DEFAULT NULL, name VARCHAR(100) NOT NULL, count TINYINT UNSIGNED NOT NULL DEFAULT 0, price DECIMAL(10, 2) NOT NULL DEFAULT 0.00, CHECK (category_id > 0 OR category_id IS NULL), CHECK (count >= 0 AND count <= 255), CHECK (price >= 0) );
+
+INSERT INTO products (category_id, name, count, price) VALUES (1, 'Кружка', 5, 45.90);
+
+INSERT INTO products (category_id, name, count, price) VALUES (17, 'Фломастеры', 0, 78.00);
+
+INSERT INTO products (name, count, price) VALUES ('Сникерс', 12, 50.80);
+
+SELECT * FROM products;
+
+![image](https://github.com/user-attachments/assets/fa6c57d8-0cd9-4a69-9d6a-2f9815846534)
+
+
+
+
+
+
+
 
 
 
