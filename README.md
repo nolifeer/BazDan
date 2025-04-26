@@ -147,6 +147,16 @@ LONGBLOB: хранит бинарные данные в виде строки д
 
 Как правило, эти поля используются для хранения уникальных идентификаторов объектов, которые перечислены в таблице, например, это может быть ID клиента или товара
 
+CREATE TABLE users (
+id INT(10)UNSIGNED NOT NULL PRIMARY KEY,
+first_name VARCHAR (50) NULL,
+last_name VARCHAR (50) NULL,
+birthday DATE NULL );
+INSERT INTO users (id, first_name, last_name, birthday)
+VALUES (1,'Дмитрий','Иванов',NULL),
+(2,'Анатолий','Белый',NULL),
+(3,'Денис','Давыдов','1995-09-08');
+
 
 # Практическая 1
 1) Выберите из таблицы orders все заказы
